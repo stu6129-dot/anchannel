@@ -12,11 +12,13 @@ function showPage(pageName) {
     selected.classList.add("active");
   }
 
+
   const navButtons = document.querySelectorAll(".nav");
 
   navButtons.forEach(function(button) {
     button.classList.remove("active");
   });
+
 
   const names = {
     home: "홈",
@@ -27,6 +29,7 @@ function showPage(pageName) {
     contact: "문의하기"
   };
 
+
   navButtons.forEach(function(button) {
 
     if (button.textContent.trim() === names[pageName]) {
@@ -34,6 +37,7 @@ function showPage(pageName) {
     }
 
   });
+
 
   history.pushState({}, "", "#" + pageName);
 
@@ -92,11 +96,14 @@ function loadPage() {
     page = "home";
   }
 
+
   document.querySelectorAll(".page").forEach(function(item) {
     item.classList.remove("active");
   });
 
+
   document.getElementById(page).classList.add("active");
+
 
   const names = {
     home: "홈",
@@ -106,6 +113,7 @@ function loadPage() {
     library: "자료실",
     contact: "문의하기"
   };
+
 
   document.querySelectorAll(".nav").forEach(function(button) {
 
